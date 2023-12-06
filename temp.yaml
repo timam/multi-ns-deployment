@@ -1,9 +1,7 @@
-{{- range .Values.branches }}
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-{{ . }}
+  name: guestbook
   namespace: argocd
 spec:
   project: default
@@ -16,7 +14,6 @@ spec:
         - values.yaml
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: {{ . }}
+    namespace: default
   syncPolicy:
     automated: {}
-{{- end }}
