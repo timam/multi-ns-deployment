@@ -1,0 +1,10 @@
+apiVersion: v2
+name: demo-chart
+
+type: application
+version: 1.0.0
+
+dependencies:
+  - name: deployment
+    version: "1.0.3"
+    repository: "file://charts/deployment-1.0.3.tgz"
