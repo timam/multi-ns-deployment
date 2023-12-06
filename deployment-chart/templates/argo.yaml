@@ -13,7 +13,7 @@ spec:
     path: guestbook
   destination:
     server: https://kubernetes.default.svc
-    namespace: {{ . }}
+    namespace: default
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
