@@ -1,4 +1,5 @@
 {{- range .Values.branches }}
+---
 apiVersion: v1
 kind: Namespace
 metadata:
